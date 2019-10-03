@@ -1,0 +1,28 @@
+﻿<Window x:Class="LxssManager_Restarter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LxssManager_Restarter"
+        mc:Ignorable="d"
+        Title="LxssManager Restarter" Height="240" Width="410" ResizeMode="CanMinimize" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelService" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0" Margin="10" VerticalAlignment="Top" Content="Servizio attivo: " />
+        <ComboBox x:Name="servicesCheckBox" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="0" Margin="10" VerticalAlignment="Top" />
+        <TextBlock x:Name="outputText" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="3" Margin="10"/>
+        <Button x:Name="restartButton" Grid.Column="2"  Grid.Row="3" Content="Riavvia" VerticalAlignment="Center" Margin="10" HorizontalAlignment="Center" Click="RestartButton_Click"/>
+        <Button x:Name="startButton" Grid.Column="2" Grid.Row="2" Content="Avvia" VerticalAlignment="Center" Margin="10" HorizontalAlignment="Center" Click="StartButton_Click"/>
+        <Button x:Name="stopButton" Grid.Column="2" Grid.Row="1" Content="Arresta" VerticalAlignment="Bottom" Margin="10" HorizontalAlignment="Center" Click="StopButton_Click"/>
+    </Grid>
+</Window>
